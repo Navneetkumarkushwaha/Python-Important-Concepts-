@@ -1,0 +1,113 @@
+--------------------
+Creating a Heap
+-------------------
+import heapq
+
+H = [21,1,45,78,3,5]
+# Use heapify to rearrange the elements
+heapq.heapify(H)
+print(H)
+
+O/P:-  [1, 3, 5, 78, 21, 45]
+-------------------------------
+Inserting into heap
+-------------------------------
+
+
+import heapq
+
+H = [21,1,45,78,3,5]
+# Covert to a heap
+heapq.heapify(H)
+print(H)
+
+# Add element
+heapq.heappush(H,8)
+print(H)
+
+O/P:-
+[1, 3, 5, 78, 21, 45]
+[1, 3, 5, 78, 21, 45, 8]
+
+------------------------
+Removing from heap
+------------------------
+
+import heapq
+
+H = [21,1,45,78,3,5]
+# Create the heap
+
+heapq.heapify(H)
+print(H)
+
+# Remove element from the heap
+heapq.heappop(H)
+
+print(H)
+
+O/p:-[1, 3, 5, 78, 21, 45]
+[3, 21, 5, 78, 45]
+-----------------------
+Replacing in a Heap
+-----------------------
+
+
+import heapq
+
+H = [21,1,45,78,3,5]
+# Create the heap
+
+heapq.heapify(H)
+print(H)
+
+# Replace an element
+heapq.heapreplace(H,6)
+print(H)
+
+O/p:-[1, 3, 5, 78, 21, 45]
+[3, 6, 5, 78, 21, 45]
+
+--------------------------
+Nlargest Function Of Heapq Module In Python
+--------------------------
+# Example Python program that finds the largest n elements
+
+# from a Python iterable
+
+import heapq
+
+ 
+
+iterable = [6,1,7,9,3,5,4]
+
+selectCount = 3
+
+largests = heapq.nlargest(selectCount, iterable)
+
+print(largests)
+
+O/P:-  [9, 7, 6]
+
+---------------------------------------------
+Nsmallest Function Of Heapq Module In Python
+--------------------------------------------
+
+# Example Python program that uses heapq.nsmallest()
+
+# function to find the n smallest elements from an iterable
+
+import heapq
+
+ 
+
+select = 4
+
+elements = (2, 9, 17, 11, 6, 16, 8)
+
+smallests = heapq.nsmallest(select, elements)
+
+print(smallests)
+
+
+O/p:-[2, 6, 8, 9]
